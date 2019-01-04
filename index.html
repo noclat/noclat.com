@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ⚡>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="google-site-verification" content="4tDAf8g4yGP_j5di9bQyhoze787heOIscs-jJOUhZrs">
@@ -26,27 +26,22 @@
   <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
   <meta name="theme-color" content="#212121">
 
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500" rel="stylesheet">
-  <style amp-custom>
+  <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { font-size: 100%; }
-  body { background: #FFF; font: 1rem/1.5rem 'Asap', sans-serif; color: #757575; -webkit-font-smoothing: antialiased; }
+  html { height: 100%; font-size: 100%; }
+  body { display: flex; align-items: center; justify-content: center; min-height: 100%; padding: 3rem 1.5rem; background: #FFF; font: 1rem/1.5rem 'Asap', sans-serif; color: #757575; -webkit-font-smoothing: antialiased; }
   a { border-bottom: 1px solid #E0E0E0; color: #DDAA00; text-decoration: none; }
   a:hover, a:focus { border-bottom: 2px solid #BDBDBD; }
   a:visited { border-bottom-color: #DDAA00; }
   img { display: block; max-width: 100%; height: auto; }
-  .main { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 3rem 1.5rem; }
-  .about { max-width: 60ch; }
+  .main { max-width: 60ch; }
   .picture { overflow: hidden; margin-bottom: 3rem; border-radius: .125rem; }
-  .about p:not(:last-child) { margin-bottom: 1.5rem; }
+  .main p:not(:last-child) { margin-bottom: 1.5rem; }
   .social a:not(:last-child) { margin-right: .5rem; }
   @media (min-width: 750px) {
     html { font-size: 112.5%; }
-    .main { padding: 6rem 1.5rem; }
+    body { padding: 6rem 1.5rem; }
   }
   </style>
 
@@ -58,41 +53,28 @@
     "url": "https://ntorres.com"
   }
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43254126-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-43254126-5');
+  </script>
 </head>
 
 <body>
-
-  <amp-analytics type="googleanalytics" id="analytics1">
-  <script type="application/json">
-  {
-    "vars": {
-      "account": "UA-43254126-5"
-    },
-    "triggers": {
-      "trackPageview": {
-        "on": "visible",
-        "request": "pageview"
-      }
-    }
-  }
-  </script>
-  </amp-analytics>
-
-
   <main class="main">
-    <section class="about">
-      <figure class="picture">
-        <img src="picture.jpg" alt="Profile picture">
-      </figure>
-      <p>
-        I'm Nicolas Torres, a 26 year-old <strong>web developer</strong>, minimalist and urban backpacker from Paris, France. Currently building internal tools at <a href="https://www.algolia.com" target="_blank">Algolia</a>. 
-      </p>
-      <footer class="social">
-        <a href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com/nicot.tv" target="_blank">Instagram</a>
-        <a href="mailto:hello@ntorres.com">hello@ntorres.com</a>
-      </footer>
-    </section>
+    <figure class="picture">
+      <img src="picture.jpg" alt="Profile picture">
+    </figure>
+    <p>
+      I'm Nicolas Torres, a 26 year-old <strong>web developer</strong>, minimalist and urban backpacker from Paris, France. Currently building internal tools at <a href="https://www.algolia.com" target="_blank">Algolia</a>. 
+    </p>
+    <footer class="social">
+      <a href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/nicot.tv" target="_blank">Instagram</a>
+      <a href="mailto:hello@ntorres.com">hello@ntorres.com</a>
+    </footer>
   </main>
 </body>
 </html>
