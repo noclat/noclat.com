@@ -12,7 +12,7 @@
   "scripts": {
     "clear": "rm -rf ./build ./.cache",
     "dev": "parcel ./src/index.html -d ./build -p 3000",
-    "build": "parcel build ./src/index.html -d ./build",
+    "build": "parcel build ./src/index.html -d ./build --no-source-maps",
     "serve": "serve ./build -l 3000",
     "deploy": "yarn clear && yarn build && firebase deploy"
   },
