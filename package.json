@@ -1,0 +1,25 @@
+{
+  "name": "ntorres.com",
+  "version": "1.0.0",
+  "description": "Nicolas Torres, web developer and from Paris, France, crafting digital tools.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noclat/ntorres.com.git"
+  },
+  "author": "Nicolas Torres",
+  "license": "MIT",
+  "homepage": "https://github.com/noclat/ntorres.com#readme",
+  "scripts": {
+    "clear": "rm -rf ./build ./.cache",
+    "dev": "parcel ./src/index.html -d ./build -p 3000",
+    "build": "parcel build ./src/index.html -d ./build",
+    "serve": "serve ./build -l 3000",
+    "deploy": "yarn clear && yarn build && firebase deploy"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "parcel-bundler": "^1.11.0",
+    "serve": "^11.0.0",
+    "tailwindcss": "^0.7.4"
+  }
+}

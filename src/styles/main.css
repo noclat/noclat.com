@@ -1,0 +1,89 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+a:not([class]) {
+  @apply text-accent;
+  @apply underline;
+}
+
+a:not([class]):hover,
+a:not([class]):focus {
+  @apply no-underline;
+}
+
+strong, b {
+  @apply text-darkest;
+  @apply font-medium;
+}
+
+.container {
+  max-width: 576px;
+  @apply px-6;
+  @apply m-auto;
+}
+
+@screen lg {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.btn {
+  @apply inline-block;
+  @apply px-6;
+  @apply bg-accent rounded-full shadow-inner;
+  @apply leading-lg font-heading font-medium;
+  @apply text-sm text-black no-underline;
+}
+
+.main-title {
+  @apply mb-4;
+  @apply leading-lg text-2xl;
+  @apply font-heading font-medium;
+  @apply text-darkest tracking-tight;
+}
+
+@screen lg {
+  .main-title {
+    @apply leading-xl text-5xl;
+  }
+}
+
+.title {
+  @apply mb-4;
+  @apply font-heading font-medium text-lg;
+  @apply text-darkest;
+}
+
+.main-title:after, 
+.title:after {
+  content: '.';
+}
+
+.article {
+  @apply block;
+  @apply text-darker no-underline;
+}
+
+.article-title {
+  @apply text-base font-medium;
+  @apply text-darkest;
+}
+
+@screen lg {
+  .article-title:after {
+    @apply inline-block ml-2;
+    @apply font-normal;
+    @apply text-accent;
+  
+    content: '→';
+    transition: transform .15s;
+  }
+
+  .article:hover .article-title:after,
+  .article:focus .article-title:after {
+    transform: translateX(.5rem);
+  }
+}
