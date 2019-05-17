@@ -8,7 +8,7 @@
   },
   "author": "Nicolas Torres",
   "license": "MIT",
-  "homepage": "https://github.com/noclat/ntorres.com#readme",
+  "homepage": "https://ntorres.com",
   "scripts": {
     "clear": "rm -rf ./build ./.cache",
     "dev": "parcel ./src/index.html -d ./build -p 3000",
