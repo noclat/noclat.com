@@ -4,13 +4,14 @@
 @tailwind screens;
 
 a:not([class]) {
-  @apply text-accent;
-  @apply underline;
+  @apply border-b border-solid border-light;
+  @apply text-accent no-underline;
+  transition: border-color .15s;
 }
 
 a:not([class]):hover,
 a:not([class]):focus {
-  @apply no-underline;
+  @apply border-accent;
 }
 
 strong, b {
@@ -31,11 +32,27 @@ strong, b {
 }
 
 .btn {
-  @apply inline-block;
+  @apply inline-block relative overflow-hidden;
   @apply px-6;
   @apply bg-accent rounded-full shadow-inner;
   @apply leading-lg font-heading font-medium;
   @apply text-sm text-black no-underline;
+}
+
+.btn:after {
+  @apply absolute;
+  @apply w-full h-full;
+  @apply bg-white rounded-full;
+  content: '';
+  top: 0; left: 0;
+  opacity: .1;
+  transition: transform .15s;
+  transform: scaleX(0);
+}
+
+.btn:hover:after,
+.btn:focus:after {
+  transform: scaleX(1);
 }
 
 .main-title {

@@ -45,6 +45,7 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 
 let colors = {
   'accent': '#FFC107',
+  'white': '#FFF',
   'lightest': '#FAFAFA',
   'lighter': '#F5F5F5',
   'light': '#EEEEEE',
