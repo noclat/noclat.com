@@ -19,6 +19,11 @@ strong, b {
   @apply font-medium;
 }
 
+ul {
+  @apply p-0;
+  list-style: none;
+}
+
 .container {
   max-width: 576px;
   @apply px-6;
@@ -80,10 +85,11 @@ strong, b {
 }
 
 .article {
-  @apply block py-4 px-6;
+  @apply relative block py-4 px-6;
   @apply border border-solid border-light rounded-sm;
   @apply leading-sm;
   @apply text-darker no-underline;
+  top: -1px;
   transition: border-color .15s;
 }
 
