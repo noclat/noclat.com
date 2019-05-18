@@ -63,27 +63,20 @@ strong, b {
 }
 
 .article {
-  @apply block;
+  @apply block py-4 px-6;
+  @apply border border-solid border-light rounded-sm;
+  @apply leading-sm;
   @apply text-darker no-underline;
+  transition: border-color .15s;
+}
+
+.article:hover,
+.article:focus {
+  @apply border-accent;
 }
 
 .article-title {
-  @apply text-base font-medium;
+  @apply truncate;
+  @apply text-sm font-medium;
   @apply text-darkest;
-}
-
-@screen lg {
-  .article-title:after {
-    @apply inline-block ml-2;
-    @apply font-normal;
-    @apply text-accent;
-  
-    content: '→';
-    transition: transform .15s;
-  }
-
-  .article:hover .article-title:after,
-  .article:focus .article-title:after {
-    transform: translateX(.5rem);
-  }
 }

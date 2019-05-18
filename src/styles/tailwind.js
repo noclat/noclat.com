@@ -47,6 +47,7 @@ let colors = {
   'accent': '#FFC107',
   'lightest': '#FAFAFA',
   'lighter': '#F5F5F5',
+  'light': '#EEEEEE',
   'dark': '#9E9E9E',
   'darker': '#616161',
   'darkest': '#212121',
