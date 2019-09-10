@@ -1,7 +1,6 @@
-@tailwind preflight;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind screens;
 
 a:not([class]) {
   @apply border-b border-solid border-light;

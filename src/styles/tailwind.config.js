@@ -1,0 +1,53 @@
+module.exports = {
+  theme: {
+    fontFamily: {
+      'main': [
+        'Asap',
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        'sans-serif',
+      ],
+      'heading': [
+        'Roboto Sans',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'Liberation Mono',
+        'Courier New',
+        'monospace',
+      ],
+    },
+    colors: {
+      'accent': '#FFC107',
+      'white': '#FFF',
+      'lightest': '#FAFAFA',
+      'lighter': '#F5F5F5',
+      'light': '#EEEEEE',
+      'dark': '#9E9E9E',
+      'darker': '#616161',
+      'darkest': '#212121',
+      'black': '#000',
+    },
+    screens: {
+      'sm': '425px',
+      'md': '768px',
+      'lg': '1024px',
+    },
+    lineHeight: {
+      'xs': '1rem',
+      'sm': '1.25rem',
+      'normal': '1.5rem',
+      'lg': '2rem',
+      'xl': '3rem',
+    },
+  },
+}

@@ -8,7 +8,7 @@ class TailwindExtractor {
 }
 
 const plugins = [
-  tailwindcss('./src/styles/tailwind.js')
+  tailwindcss('./src/styles/tailwind.config.js')
 ];
 
 if (process.env.NODE_ENV !== 'development') {
