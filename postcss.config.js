@@ -1,3 +1,4 @@
+const cssnano = require('cssnano');
 const tailwindcss = require('tailwindcss');
 const purgecss = require('@fullhuman/postcss-purgecss');
 
@@ -20,6 +21,12 @@ if (process.env.NODE_ENV !== 'development') {
           extractor: TailwindExtractor,
           extensions: ['html']
       }
+    ]
+  }));
+  plugins.push(cssnano({
+    preset: [
+      'default',
+      {discardComments: {removeAll: true}}
     ]
   }));
 }
