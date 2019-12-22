@@ -1,14 +1,14 @@
 {
-  "name": "ntorres.com",
+  "name": "noclat.com",
   "version": "1.0.0",
   "description": "Nicolas Torres, full-stack web developer, designer and minimalist from Paris, France, crafting digital tools.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noclat/ntorres.com.git"
+    "url": "git+https://github.com/noclat/noclat.com.git"
   },
   "author": "Nicolas Torres",
   "license": "MIT",
-  "homepage": "https://ntorres.com",
+  "homepage": "https://noclat.com",
   "scripts": {
     "clear": "rm -rf ./build ./.cache",
     "dev": "parcel ./src/index.html -d ./build -p 3000",
