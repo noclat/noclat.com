@@ -9,27 +9,24 @@ class TailwindExtractor {
 }
 
 const plugins = [
-  tailwindcss('./src/styles/tailwind.config.js')
-];
-
-if (process.env.NODE_ENV !== 'development') {
-  plugins.push(purgecss({
-    content: ['src/index.html'],
-    css: ['src/styles/main.css'],
+  tailwindcss('./styles/tailwind.config.js'),
+  purgecss({
+    content: ['index.html'],
+    css: ['styles/main.css'],
     extractors: [
       {
-          extractor: TailwindExtractor,
-          extensions: ['html']
+        extractor: TailwindExtractor,
+        extensions: ['html']
       }
     ]
-  }));
-  plugins.push(cssnano({
+  }),
+  cssnano({
     preset: [
       'default',
       {discardComments: {removeAll: true}}
     ]
-  }));
-}
+  })
+];
 
 module.exports = {
   plugins,
