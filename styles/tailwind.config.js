@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'main': [
+      'sans': [
         'Asap',
         'system-ui',
         'BlinkMacSystemFont',
@@ -16,7 +16,7 @@ module.exports = {
         'Helvetica Neue',
         'sans-serif',
       ],
-      'heading': [
+      'mono': [
         'Roboto Sans',
         'Menlo',
         'Monaco',
