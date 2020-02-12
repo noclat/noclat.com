@@ -13,8 +13,7 @@
     "dev": "npm-run-all -p watch serve",
     "watch": "postcss -w styles/main.css -o static/main.css --no-map",
     "build": "postcss styles/main.css -o static/main.css --no-map",
-    "serve": "serve . -l 3000",
-    "deploy": "yarn clear && yarn build"
+    "serve": "serve . -l 3000"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
