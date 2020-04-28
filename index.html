@@ -25,8 +25,44 @@
   <link rel="icon" type="image/png" href="static/favicon-192x192.png" sizes="192x192">
   <meta name="theme-color" content="#212121">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500|Asap:400,500?display=swap" rel="stylesheet">
-  <link href="static/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400?display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    body{padding:50vh 0 1.5rem;background:#1d1e22;line-height:1.5rem;font-size:1rem;font-family:'Roboto Mono',mono;font-weight:300;color:rgba(255,255,255,.8)}
+    h1{line-height:inherit;font-size:inherit;text-transform: uppercase;font-weight:400;color:rgba(255,255,255,.4)}
+    h1:after{content:'_';color:rgba(255,255,255,.2);animation: blink 1.3s step-start infinite}
+    strong{font-weight:400;color:rgba(255,255,255,.9)}
+    a{border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;color:#ffc107;transition:border-color .15s}
+    a:focus,a:hover{border-bottom-color:#ffc107}
+    .cover{position: absolute;top:0;left:50%;max-width:100%;width:100vh;height:50vh;background:url(static/cover.png) no-repeat center;background-size:cover;transform:translateX(-50%)}
+    .cover.animated{animation:fromTop 2s .6s cubic-bezier(0.25, 1, 0.5, 1) both}
+    .container{position:relative;z-index:1;max-width:40rem;margin:auto;padding:0 3rem}
+    .container.animated > *{animation:fromBottom 2s cubic-bezier(0.25, 1, 0.5, 1) both}
+    .container.animated > :nth-child(1){animation-delay:.1s}
+    .container.animated > :nth-child(2){animation-delay:.2s}
+    .container.animated > :nth-child(3){animation-delay:.3s}
+    .container.animated > :nth-child(4){animation-delay:.4s}
+    .container.animated > :nth-child(5){animation-delay:.5s}
+    .container>*{margin-bottom:2rem}
+    .contact{display:flex;flex-direction:column;align-items:center}
+    .profile{display:inline-block;overflow:hidden;border-radius:100%;width:4rem;height:4rem}
+    .profile img{display:block;width:100%;height:100%}
+    .profile,.btn{box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),inset 0 -2px 0 0 rgba(0,0,0,.06)}
+    .btn{display:inline-block;position:relative;overflow:hidden;margin-top:1rem;padding:0 1.25rem;background:rgba(255,255,255,.1);border-radius:3rem;border:none;line-height:2.5rem;font-weight:500;font-size:1rem;text-decoration:none;color:#ffc107;transition:color .15s}
+    .btn:after{content:'';opacity:.1;position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;border-radius:3rem;transition:transform .15s;transform:scaleX(0)}
+    .btn:focus,.btn:hover{color:rgba(255,255,255,.9)}
+    .btn:focus:after,.btn:hover:after{transform:scaleX(1)}
+    @keyframes fromTop{from{opacity:0;transform:translate(-50%,-2rem)}to{opacity:1;transform:translateX(-50%)}}
+    @keyframes fromBottom{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+    @keyframes blink{50%{opacity:0}}
+    @media (min-width:1024px) {
+      body{padding:60vh 0 4.5rem;line-height:2rem;font-size:1.25rem}
+      .cover{width:140vh;height:70vh}
+      .container{max-width:60rem;padding:0 2rem}
+      .contact{display:block}
+      .profile{width:2.5rem;height:2.5rem}
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -45,118 +81,40 @@
   </script>
 </head>
 
-<body class="font-sans bg-lightest leading-normal text-base text-darker">
-  <main class="pt-24 lg:pt-36">
-    <header class="container mx-auto py-24 md:py-36">
-      <h1 class="main-title">Crafting digital tools</h1>
-      <div class="lg:flex -mx-6 items-center">
-        <p class="lg:w-2/3 mb-12 lg:mb-0 px-6">
-          Your business may rely on dozen of services, but still struggle to smoothly operate over internal or other specific use-cases that just don’t scale. 
-          I use <strong>web technologies to tailor custom tools</strong> to fill those gaps, empowering your people to <strong>reinvest many hours a week</strong> on what brings value.
-        </p>
-        <div class="lg:w-1/3 px-6 text-center">
-          <a class="btn" href="mailto:hi@noclat.com">hi@noclat.com</a>
-        </div>
-      </div>
-    </header>
-
-    <section class="bg-lighter">
-      <div class="container mx-auto py-12">
-        <div class="lg:flex items-baseline -mx-6">
-          <article class="lg:w-1/3 mb-12 lg:mb-0 px-6">
-            <figure class="block max-w-xs h-56 flex items-end mx-auto mb-6 px-6 lg:py-6">
-              <img class="w-full h-auto" src="static/undraw-interfaces.svg" alt="interfaces" />
-            </figure>
-            <h2 class="title">Interfaces</h2>
-            <p>
-              Deep knowledge of design and front-end development results in <strong>interfaces that are easy and pleasant to use</strong>, for both mobile and desktop experiences.
-              The vision is to <strong>reduce human input to what’s essential</strong> and guide your users through the entire process.
-            </p>
-          </article>
-          <article class="lg:w-1/3 mb-12 lg:mb-0 px-6">
-            <figure class="block max-w-xs h-56 flex items-end mx-auto mb-6 px-6 lg:py-6">
-              <img class="w-full h-auto" src="static/undraw-automations.svg" alt="automations" />
-            </figure>
-            <h2 class="title">Automations</h2>
-            <p>
-              From <strong>automating recurring manual actions</strong> to <strong>connecting external services</strong> like GSuite, Slack, or GitHub, I supercharge the tools with bots, notifications, synchronizations, etc. 
-              By delivering the right information to the right people at the right time, <strong>your team’s productivity leaps forward</strong>.
-            </p>
-          </article>
-          <article class="lg:w-1/3 px-6">
-            <figure class="block max-w-xs h-56 flex items-end mx-auto mb-6 px-6 lg:py-6">
-              <img class="w-full h-auto" src="static/undraw-standards.svg" alt="standards" />
-            </figure>
-            <h2 class="title">Standards</h2>
-            <p>
-              My work is based on world famous technologies and best practices.
-              <strong>React</strong>, <strong>TypeScript</strong>, <strong>Node</strong>, <strong>PostgreSQL</strong>, <strong>TailwindCSS</strong>, <strong>Jest</strong>, <strong>Git</strong>, and more help me build full-fledged products in record times, while preserving high quality and maintenability.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <footer class="container mx-auto py-24 md:py-36">
-      <div class="lg:flex -mx-6 items-start">
-        <section class="lg:w-2/5 mb-12 lg:mb-0 px-6">
-          <h2 class="title">Latest publications</h2>
-          <article class="mb-3">
-            <a 
-              class="article"
-              href="https://medium.com/algolia-design/design-makes-me-a-better-developer-7e9721e4e437"
-              target="_blank"
-              title="Learning design has made me a better developer"
-            >
-              <h3 class="article-title">Learning design has made me a better developer</h3>
-              <time class="text-xs text-dark" datetime="2019-12-19">Dec 19, 2019 on <span class="underline">Medium.com</span></time>
-            </a>
-          </article>
-          <article class="mb-3">
-            <a 
-              class="article"
-              href="https://stories.algolia.com/how-to-unlock-time-for-side-projects-during-working-hours-6d3e1d211fbf"
-              target="_blank"
-              title="How to Unlock Time for Side Projects During Working Hours"
-            >
-              <h3 class="article-title">How to Unlock Time for Side Projects During Working Hours</h3>
-              <time class="text-xs text-dark" datetime="2019-02-27">Feb 27, 2019 on <span class="underline">Medium.com</span></time>
-            </a>
-          </article>
-        </section>
-        <section class="lg:w-3/5 px-6">
-          <div class="md:flex items-end mb-10">
-            <div class="flex-auto">
-              <h2 class="title">About me</h2>
-              <p>
-                I’m Nicolas Torres, a 27 year-old full-stack developer, designer and minimalist who started to code at 13. 
-                Currently CTO at <a href="https://epycure.com" target="_blank">Epycure</a> in Paris, France.
-              </p>
-            </div>
-            <figure class="flex-none w-24 h-24 my-12 mx-auto md:ml-6 md:my-0 rounded-full overflow-hidden shadow-inner">
-              <img class="block w-full h-auto" src="static/profile.jpg" alt="profile" />
-            </figure>
-          </div>
-          <ul class="flex flex-col sm:flex-row justify-center md:justify-start text-center list-none">
-            <li class="mb-3 sm:mx-1 md:mr-3 md:ml-0">
-              <a class="btn" href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
-            </li>
-            <li class="mb-3 sm:mx-1 md:mr-3 md:ml-0">
-              <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
-            </li>
-            <li class="mb-3 sm:mx-1 md:mr-3 md:ml-0">
-              <a class="btn mx-1 md:mx-0" href="mailto:hi@noclat.com">hi@noclat.com</a>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </footer>
+<body>
+  <div class="cover animated"></div>
+  <main class="container animated">
+    <h1>Crafting digital tools</h1>
+    <p>
+      Your business may rely on dozen of services, but still struggle to smoothly operate over internal or other specific use-cases that just don’t scale.
+      I use <strong>web technologies</strong> to tailor <strong>custom tools</strong> to fill those gaps, empowering your people to <strong>reinvest many hours a week</strong> on what brings value.
+    </p>
+    <p>
+      From <strong>automations</strong> to <strong>APIs</strong> to <strong>interfaces</strong>, I build full-fledged interconnected products in record times, while preserving high <strong>quality</strong>, <strong>security</strong> and <strong>maintainability</strong> standards.
+      My work is based on world famous technologies and best practices, on top of advanced design knowledge.
+    </p>
+    <p>
+      I am Nicolas Torres, a 27 year-old full-stack developer, designer and minimalist who started to code at 13. 
+      Currently CTO at <a href="https://epycure.com" target="_blank">Epycure</a> in Paris, France.
+    </p>
+    <aside class="contact">
+      <figure class="profile"><img src="./static/profile.jpg" alt="profile" /></figure>
+      <a class="btn" href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
+      <a class="btn" href="https://medium.com/@noclat" target="_blank">Medium</a>
+      <a class="btn" href="mailto:hi@noclat.com">hi@noclat.com</a>
+    </aside>
   </main>
-  
+
+  <script type="text/javascript">
+    const buttons = [].slice.call(document.querySelectorAll('.btn'), 0);
+    const sound = new Audio('./static/button.m4a');
+    sound.volume = .5;
+    for (const elmt of buttons) {
+      elmt.addEventListener('mouseenter', () => {
+        sound.play();
+      });
+    }
+  </script>
 </body>
 </html>
-
-<!--
-CREDITS:
-- Illustrations: [Undraw](https://undraw.co)
--->
