@@ -21,8 +21,8 @@
   <meta name="description" content="Web developer, designer and minimalist from Paris, France, crafting digital tools.">
   <link rel="canonical" href="https://noclat.com">
 
-  <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="static/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32">
   <meta name="theme-color" content="#212121">
 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400?display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
     *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
     body{padding:50vh 0 1.5rem;background:#1d1e22;line-height:1.5rem;font-size:1rem;font-family:'Roboto Mono',mono;font-weight:300;color:rgba(255,255,255,.8)}
     h1{line-height:inherit;font-size:inherit;text-transform: uppercase;font-weight:400;color:rgba(255,255,255,.4)}
-    h1:after{content:'_';color:rgba(255,255,255,.2);animation: blink 1.3s step-start infinite}
+    .cursor:after{content:'_';color:rgba(255,255,255,.2);animation: blink 1.3s step-start infinite}
     strong{font-weight:400;color:rgba(255,255,255,.9)}
     a{border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;color:#ffc107;transition:border-color .15s}
     a:focus,a:hover{border-bottom-color:#ffc107}
@@ -84,7 +84,7 @@
 <body>
   <div class="cover animated"></div>
   <main class="container animated">
-    <h1>Crafting digital tools</h1>
+    <h1>Crafting digital tools<span aria-hidden="true" class="cursor"></span></h1>
     <p>
       Your business may rely on a dozen of services, but still struggle to smoothly operate over internal or other specific use-cases that just don’t scale.
       I use <strong>web technologies</strong> to tailor <strong>custom tools</strong> to fill those gaps, empowering your people to <strong>reinvest many hours a week</strong> on what brings value.
@@ -94,14 +94,13 @@
       My work is based on world famous technologies and best practices, on top of a solid design knowledge.
     </p>
     <p>
-      I am Nicolas Torres, a 28 year-old full-stack developer, designer and minimalist who started to code at 13. 
-      Currently CTO at <a href="https://epycure.com" target="_blank">Epycure</a> in Paris, France.
+      I am Nicolas Torres, a 28 year-old full-stack developer, designer and minimalist from Paris, France, who started to code at 13.
     </p>
     <aside class="contact">
       <figure class="profile"><img src="./static/profile.jpg" alt="profile" /></figure>
       <a class="btn" href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
-      <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
       <a class="btn" href="https://dev.to/noclat" target="_blank">DEV.to</a>
+      <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
       <a class="btn" href="mailto:hi@noclat.com">hi@noclat.com</a>
     </aside>
   </main>
