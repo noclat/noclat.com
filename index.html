@@ -96,14 +96,13 @@
   </main>
 
   <script type="text/javascript">
-    const buttons = [].slice.call(document.querySelectorAll('.btn'), 0);
     const sound = new Audio('./static/button.m4a');
     sound.volume = .5;
-    for (const elmt of buttons) {
-      elmt.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.btn').forEach((btn) => {
+      btn.addEventListener('mouseenter', () => {
         sound.play();
       });
-    }
+    });
   </script>
 </body>
 </html>
