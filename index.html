@@ -34,15 +34,14 @@
     h2{line-height:inherit;font-size:1.5rem;font-weight:500;color:#E5E5E5}
     a{border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;color:#ffc107;transition:border-color .15s}
     a:focus,a:hover{border-bottom-color:#ffc107}
-    .main{position:fixed;top:0;left:0;right:0;bottom:0;overflow:auto;display:flex;padding:3rem 1.5rem;-webkit-overflow-scrolling:smooth}
+    .main{position:fixed;top:0;left:0;right:0;bottom:0;overflow-x:hidden;overflow-y:auto;display:flex;padding:3rem 1.5rem;-webkit-overflow-scrolling:smooth}
     .container{max-width:36rem;margin:auto}
-    .container.animated > *{animation:fromBottom 2s cubic-bezier(0.25, 1, 0.5, 1) both}
-    .container.animated > :nth-child(1){animation-delay:.1s}
-    .container.animated > :nth-child(2){animation-delay:.2s}
-    .container.animated > :nth-child(3){animation-delay:.3s}
-    .container.animated > :nth-child(4){animation-delay:.4s}
-    .container.animated > :nth-child(5){animation-delay:.5s}
     .container>*{margin-bottom:2rem}
+    .container.animated > *{animation-duration:3s;animation-timing-function:cubic-bezier(0.25, 1, 0.5, 1);animation-fill-mode:both}
+    .container.animated > :nth-child(1){animation-name:fromTop;animation-delay:3s}
+    .container.animated > :nth-child(2){animation-name:fadeIn;animation-delay:.5s}
+    .container.animated > :nth-child(3){animation-name:fromBottom;animation-delay:3s}
+    .container.animated > :nth-child(4){animation-name:fromBottom;animation-delay:3.5s}
     .contact{display:flex;flex-direction:column;align-items:flex-start}
     .profile{display:inline-block;overflow:hidden;border-radius:100%;width:4rem;height:4rem}
     .profile img{display:block;width:100%;height:100%}
@@ -51,7 +50,9 @@
     .btn:after{content:'';opacity:.1;position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;border-radius:3rem;transition:transform .15s;transform:scaleX(0)}
     .btn:focus,.btn:hover{color:rgba(255,255,255,.9)}
     .btn:focus:after,.btn:hover:after{transform:scaleX(1)}
-    @keyframes fromBottom{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+    @keyframes fadeIn{from{opacity:0;transform:scale(2)}to{opacity:1;transform:none}}
+    @keyframes fromTop{from{opacity:0;transform:translateY(-1rem)}to{opacity:1;transform:none}}
+    @keyframes fromBottom{from{opacity:0;transform:translateY(1rem)}to{opacity:1;transform:none}}
     @media (min-width:480px) {
       .contact{flex-direction:row}
       .profile{width:2.5rem;height:2.5rem}
