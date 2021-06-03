@@ -7,60 +7,56 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Nicolas Torres, digital tools</title>
+  <title>Nicolas Torres, creative</title>
 
   <meta property="og:url" content="https://noclat.com">
-  <meta property="og:title" content="Nicolas Torres">
-  <meta property="og:site_name" content="Nicolas Torres, digital tools">
-  <meta property="og:description" content="Web developer, designer and minimalist from Paris, France, crafting digital tools.">
+  <meta property="og:title" content="Nicolas Torres, creative">
+  <meta property="og:site_name" content="Nicolas Torres, creative">
+  <meta property="og:description" content="Creative from Paris, France, founder of Dinodust.net.">
 
-  <meta itemprop="name" content="Nicolas Torres">
-  <meta itemprop="description" content="Web developer, designer and minimalist from Paris, France, crafting digital tools.">
+  <meta itemprop="name" content="Nicolas Torres, creative">
+  <meta itemprop="description" content="Creative from Paris, France, founder of Dinodust.net.">
   <meta itemprop="image" content="https://noclat.com/favicon-192x192.png">
 
-  <meta name="description" content="Web developer, designer and minimalist from Paris, France, crafting digital tools.">
+  <meta name="description" content="Creative from Paris, France, founder of Dinodust.net.">
   <link rel="canonical" href="https://noclat.com">
 
   <link rel="icon" type="image/png" href="static/favicon-192x192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32">
-  <meta name="theme-color" content="#212121">
+  <meta name="theme-color" content="#171717">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400?display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-    body{padding:50vh 0 1.5rem;background:#1d1e22;line-height:1.5rem;font-size:1rem;font-family:'Roboto Mono',mono;font-weight:300;color:rgba(255,255,255,.8)}
-    h1{line-height:inherit;font-size:inherit;text-transform: uppercase;font-weight:400;color:rgba(255,255,255,.4)}
-    h1:after{content:'_';color:rgba(255,255,255,.2);animation: blink 1.3s step-start infinite}
-    strong{font-weight:400;color:rgba(255,255,255,.9)}
+    body{background:#080808;line-height:2rem;font-size:1.25rem;font-family:'IBM Plex Sans', sans-serif;font-weight:300;color:#E5E5E5}
+    h1{line-height:inherit;font-size:2.25rem;font-weight:500;color:#404040}
+    h2{line-height:inherit;font-size:1.5rem;font-weight:500;color:#E5E5E5}
     a{border-bottom:1px solid rgba(255,255,255,.4);text-decoration:none;color:#ffc107;transition:border-color .15s}
     a:focus,a:hover{border-bottom-color:#ffc107}
-    .cover{position: absolute;top:0;left:50%;max-width:100%;width:100vh;height:50vh;background:url(static/cover.png) no-repeat center;background-size:cover;transform:translateX(-50%)}
-    .cover.animated{animation:fromTop 2s .6s cubic-bezier(0.25, 1, 0.5, 1) both}
-    .container{position:relative;z-index:1;max-width:40rem;margin:auto;padding:0 1.5rem}
-    .container.animated > *{animation:fromBottom 2s cubic-bezier(0.25, 1, 0.5, 1) both}
-    .container.animated > :nth-child(1){animation-delay:.1s}
-    .container.animated > :nth-child(2){animation-delay:.2s}
-    .container.animated > :nth-child(3){animation-delay:.3s}
-    .container.animated > :nth-child(4){animation-delay:.4s}
-    .container.animated > :nth-child(5){animation-delay:.5s}
+    .main{position:fixed;top:0;left:0;right:0;bottom:0;overflow-x:hidden;overflow-y:auto;display:flex;padding:3rem 1.5rem;-webkit-overflow-scrolling:smooth}
+    .container{max-width:36rem;margin:auto}
     .container>*{margin-bottom:2rem}
-    .contact{display:flex;flex-direction:column;align-items:center}
+    .container.animated > *{animation-duration:3s;animation-timing-function:cubic-bezier(0.25, 1, 0.5, 1);animation-fill-mode:both}
+    .container.animated > :nth-child(1){animation-name:fromTop;animation-delay:3s}
+    .container.animated > :nth-child(2){animation-name:fadeIn;animation-delay:.5s}
+    .container.animated > :nth-child(3){animation-name:fromBottom;animation-delay:3s}
+    .container.animated > :nth-child(4){animation-name:fromBottom;animation-delay:3.5s}
+    .contact{display:flex;flex-direction:column;align-items:flex-start}
     .profile{display:inline-block;overflow:hidden;border-radius:100%;width:4rem;height:4rem}
     .profile img{display:block;width:100%;height:100%}
     .profile,.btn{box-shadow:inset 0 1px 0 0 rgba(255,255,255,.1),inset 0 -2px 0 0 rgba(0,0,0,.06)}
-    .btn{display:inline-block;position:relative;overflow:hidden;margin-top:1rem;padding:0 1.25rem;background:rgba(255,255,255,.1);border-radius:3rem;border:none;line-height:2.5rem;font-weight:500;font-size:1rem;text-decoration:none;color:#ffc107;transition:color .15s}
+    .btn{display:inline-block;position:relative;overflow:hidden;margin-top:1rem;padding:0 1.25rem;border-radius:3rem;border:none;background:#262626;text-align:center;line-height:2.5rem;font-weight:500;font-size:1rem;color:#ffc107;text-decoration:none;transition:color .15s}
     .btn:after{content:'';opacity:.1;position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;border-radius:3rem;transition:transform .15s;transform:scaleX(0)}
     .btn:focus,.btn:hover{color:rgba(255,255,255,.9)}
     .btn:focus:after,.btn:hover:after{transform:scaleX(1)}
-    @keyframes fromTop{from{opacity:0;transform:translate(-50%,-2rem)}to{opacity:1;transform:translateX(-50%)}}
-    @keyframes fromBottom{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
-    @keyframes blink{50%{opacity:0}}
-    @media (min-width:1024px) {
-      body{padding:60vh 0 4.5rem;line-height:2rem;font-size:1.25rem}
-      .cover{width:140vh;height:70vh}
-      .container{max-width:60rem;padding:0 2rem}
-      .contact{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:scale(2)}to{opacity:1;transform:none}}
+    @keyframes fromTop{from{opacity:0;transform:translateY(-1rem)}to{opacity:1;transform:none}}
+    @keyframes fromBottom{from{opacity:0;transform:translateY(1rem)}to{opacity:1;transform:none}}
+    @media (min-width:480px) {
+      .contact{flex-direction:row}
       .profile{width:2.5rem;height:2.5rem}
+      .btn{margin-top:0;margin-left:.5rem}
     }
   </style>
 
@@ -82,38 +78,32 @@
 </head>
 
 <body>
-  <div class="cover animated"></div>
-  <main class="container animated">
-    <h1>Crafting digital tools</h1>
-    <p>
-      Your business may rely on a dozen of services, but still struggle to smoothly operate over internal or other specific use-cases that just don’t scale.
-      I use <strong>web technologies</strong> to tailor <strong>custom tools</strong> to fill those gaps, empowering your people to <strong>reinvest many hours a week</strong> on what brings value.
-    </p>
-    <p>
-      From <strong>automations</strong> to <strong>APIs</strong> to <strong>interfaces</strong>, I deliver full-fledged interconnected products in record times, while preserving high <strong>quality</strong>, <strong>security</strong> and <strong>maintainability</strong> standards.
-      My work is based on world famous technologies and best practices, on top of a solid design knowledge.
-    </p>
-    <p>
-      I am Nicolas Torres, a 28 year-old full-stack developer, designer and minimalist from Paris, France, who started to code at 13.
-    </p>
-    <aside class="contact">
-      <figure class="profile"><img src="./static/profile.jpg" alt="profile" /></figure>
-      <a class="btn" href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
-      <a class="btn" href="https://dev.to/noclat" target="_blank">DEV.to</a>
-      <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
-      <a class="btn" href="mailto:hi@noclat.com">hi@noclat.com</a>
-    </aside>
+  <main class="main">
+    <section class="container animated">
+      <h1>Nicolas Torres</h1>
+      <h2>
+        15 years of web development has left me empty, facing an inexorable conclusion: code expire, fast. But stories don’t, and time has come to tell mines.
+      </h2>
+      <p>
+        I am a 28 year-old creative from Paris, France, working hard to craft delightful experiences at my own company <a href="https://dinodust.net" target="_blank">Dinodust</a>.
+      </p>
+      <aside class="contact">
+        <figure class="profile"><img src="./static/profile.jpg" alt="profile" /></figure>
+        <a class="btn" href="https://www.linkedin.com/in/noclat" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://dribbble.com/noclat" target="_blank">Dribbble</a>
+        <a class="btn" href="mailto:hi@noclat.com">hi@noclat.com</a>
+      </aside>
+    </section>
   </main>
 
   <script type="text/javascript">
-    const buttons = [].slice.call(document.querySelectorAll('.btn'), 0);
     const sound = new Audio('./static/button.m4a');
     sound.volume = .5;
-    for (const elmt of buttons) {
-      elmt.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.btn').forEach((btn) => {
+      btn.addEventListener('mouseenter', () => {
         sound.play();
       });
-    }
+    });
   </script>
 </body>
 </html>
